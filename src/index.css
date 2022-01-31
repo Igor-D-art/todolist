@@ -1,3 +1,11 @@
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    width: 100vw;
+    background-color: rgb(18, 241, 241);
+}
+
 .main{
     display: flex;
 }
@@ -37,4 +45,14 @@ li{
 
 .active{
     background-color: rgb(174, 211, 211);
+}
+
+footer{
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(213, 228, 228);
+    height: 150px;
+    width: 100vw;
+    flex: 0 0 auto;
+    flex-shrink: 0;
 }
