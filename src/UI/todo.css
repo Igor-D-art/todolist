@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    flex-grow: 0;
+    justify-content: center;
+    font-size: 25px;
+    background-color: rgb(213, 228, 228);
+} 
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+li{
+    list-style-type: none;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+   
+}
+
+.taskSection{
+    display: flex;
+    flex-grow: 5;
+    justify-content: flex-start;
+    font-size: 25px;
+    background-color: rgb(228, 224, 23);
+}
+
+.active{
+    background-color: rgb(174, 211, 211);
+}

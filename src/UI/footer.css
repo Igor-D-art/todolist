@@ -1,0 +1,9 @@
+footer{
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(213, 228, 228);
+    height: 150px;
+    width: 100vw;
+    flex: 0 0 auto;
+    flex-shrink: 0;
+}
