@@ -1,17 +1,43 @@
-header {
+html {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+}
+
+.header {
     display: flex;
     justify-content: center;
     font-size: 50px;
-    width: 100vw;
     background-color: rgb(18, 241, 241);
+    flex: 0 0 auto;
 }
 
 .main{
+    position: relative;
     display: flex;
+    height: auto;
+    flex: 1 0 auto;
 }
 
+.navSection {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    flex-grow: 0;
+    justify-content: space-between;
+    font-size: 25px;
+    background-color: rgb(213, 228, 228);
+} 
 
-nav {
+.projectSection {
     display: flex;
     flex-direction: column;
     width: 20vw;
@@ -37,7 +63,8 @@ li{
 
 .taskSection{
     display: flex;
-    flex-grow: 5;
+    flex-direction: column;
+    flex-grow: 1;
     justify-content: flex-start;
     font-size: 25px;
     background-color: rgb(228, 224, 23);
@@ -47,12 +74,74 @@ li{
     background-color: rgb(174, 211, 211);
 }
 
-footer{
+.footer{
     display: flex;
     justify-content: flex-start;
     background-color: rgb(213, 228, 228);
     height: 150px;
-    width: 100vw;
     flex: 0 0 auto;
-    flex-shrink: 0;
+}
+
+.taskModal, .editModal {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 100px;
+    width: 30vw;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: gray;
+}
+
+.taskList{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.tasks{
+    display: flex;
+    justify-content:space-between;
+    width: 99.2%;
+    border: 1px dashed gray;
+}
+
+.titleDiv{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.taskEdit{
+    margin-right: 50px;
+}
+
+.taskControls, .taskDetails{
+    display: flex;
+    width: 10vw;
+    justify-content: start;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.description{
+    height: 100px;
+}
+
+.invisible{
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
