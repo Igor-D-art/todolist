@@ -16,8 +16,9 @@ body{
     display: flex;
     justify-content: center;
     font-size: 50px;
-    background-color: rgb(18, 241, 241);
+    background-color: rgb(156, 154, 143);
     flex: 0 0 auto;
+    height: 100px;
 }
 
 .main{
@@ -47,27 +48,14 @@ body{
     background-color: rgb(213, 228, 228);
 } 
 
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-li{
-    list-style-type: none;
-    height: 50px;
-    width: 150px;
-    text-align: center;
-   
-}
-
 .taskSection{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: flex-start;
     font-size: 25px;
-    background-color: rgb(228, 224, 23);
+    background-color: rgb(213, 228, 228);
+    border: 1px solid gray;
 }
 
 .active{
@@ -76,9 +64,10 @@ li{
 
 .footer{
     display: flex;
-    justify-content: flex-start;
-    background-color: rgb(213, 228, 228);
-    height: 150px;
+    justify-content: center;
+    font-size: 50px;
+    background-color: rgb(156, 154, 143);
+    height: 100px;
     flex: 0 0 auto;
 }
 
@@ -113,15 +102,24 @@ li{
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
+    width: 300px;
 }
 
 .taskEdit{
     margin-right: 50px;
 }
 
-.taskControls, .taskDetails{
+.taskControls {
     display: flex;
     width: 10vw;
+    justify-content: start;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.taskDetails{
+    display: flex;
+    width: 20vw;
     justify-content: start;
     margin-left: 50px;
     margin-right: 50px;
@@ -130,18 +128,43 @@ li{
 .description{
     height: 100px;
 }
-
+/* 
 .invisible{
     display: none;
-}
+} */
 
 .overlay {
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 
 .completed {
     text-decoration: line-through;
-    color: gray;
+    color: rgb(29, 28, 28);
+}
+
+.projects{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects:hover {
+    background-color: gray;
+}
+
+.activeProject{
+    background-color: gray;
+}
+
+.high{
+    background-color: red;
+}
+
+.medium{
+    background-color: yellow;
+}
+
+.low{
+    background-color: green;
 }

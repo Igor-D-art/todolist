@@ -1,48 +1,57 @@
+import { parseISO } from "date-fns";
 import { model } from "../model/model";
 import { view } from "../view/view";
 
 export const controller = (function(){
 
-    const addTask = (...theArgs)=>{
-        model.createTask(...theArgs);
+    const addTask = (title, description, priority, date, projectID)=>{
+         model.projects[projectID].createTask(title, description, priority, date);
     }; 
 
-    const removeTask = (id)=>{
-        model.taskList[id].removeSelf(id);
+    const removeTask = (projectID, taskID)=>{
+        model.projects[projectID].removeTask(taskID);
     };
 
-   const editDetails = (id)=>{
-    model.taskList[id].editDetails(id);
+   const editDetails = (projectID, taskID)=>{
+     model.projects[projectID].tasks[taskID].editDetails(projectID, taskID);
    };
 
-   const updateTaskList = ()=>{
-     model.updateTaskList();
+   const editTask = (projectID, taskID, title, description, priority, dueDate)=>{
+        model.projects[projectID].tasks[taskID].updateDetails(title, description, priority, dueDate);
    };
 
-   const editTask = (id, title, description, priority, dueDate, project)=>{
-        model.taskList[id].updateDetails(title, description, priority, dueDate, project);
+   const completeTask = (projectID, taskID)=>{
+    model.projects[projectID].tasks[taskID].setComplete(projectID, taskID);
    };
-
-   const completeTask = (id)=>{
-    model.taskList[id].setComplete(id);
-   };
-
-   const updateProjectList = ()=>{
-    model.updateProjectList();
-  };
 
    const addProject = (name)=>{
        if (name==""){
-         return
+           return
        } else {
         model.createProject(name);
        };
    };
 
    const getTasks = (id)=>{
-       model.projects[id].getTasks();
-   }
+       console.log('Im in get tasks with project index ' + id);
+       if(model.projects[id]==undefined){
+        model.projects[0].getTasks(id);
+       } else {
+        model.projects[id].getTasks(id);
+       };   
+   };
 
-   return {addTask, removeTask, editDetails, updateTaskList, editTask, completeTask, addProject, updateProjectList, getTasks}
+   const removeProject = (projectID)=>{
+        model.removeProject(projectID);
+   };
+
+   return {addTask, 
+            removeProject,
+            removeTask, 
+            editDetails, 
+            editTask, 
+            completeTask, 
+            addProject, 
+            getTasks}
 
 })();
