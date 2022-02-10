@@ -1,0 +1,10 @@
+node_modules  
+
+dist/
+
+**/package.json
+**/package-lock.json
+README.md 
+webpack.config.js
+.prettierrc.json
+.gitignore.js

@@ -1,132 +1,132 @@
 html {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
-
-body{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 5px;
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5px;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    background-color: rgb(156, 154, 143);
-    flex: 0 0 auto;
-    height: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  background-color: rgb(156, 154, 143);
+  flex: 0 0 auto;
+  height: 100px;
 }
 
-.main{
-    position: relative;
-    display: flex;
-    height: auto;
-    flex: 1 0 auto;
+.main {
+  position: relative;
+  display: flex;
+  height: auto;
+  flex: 1 0 auto;
 }
 
 .navSection {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    flex-grow: 0;
-    justify-content: space-between;
-    font-size: 25px;
-    background-color: rgb(213, 228, 228);
-} 
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  flex-grow: 0;
+  justify-content: space-between;
+  font-size: 25px;
+  background-color: rgb(213, 228, 228);
+}
 
 .projectSection {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    flex-grow: 0;
-    justify-content: center;
-    font-size: 25px;
-    background-color: rgb(213, 228, 228);
-} 
-
-.taskSection{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-start;
-    font-size: 25px;
-    background-color: rgb(213, 228, 228);
-    border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  flex-grow: 0;
+  justify-content: center;
+  font-size: 25px;
+  background-color: rgb(213, 228, 228);
 }
 
-.active{
-    background-color: rgb(174, 211, 211);
+.taskSection {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  font-size: 25px;
+  background-color: rgb(213, 228, 228);
+  border: 1px solid gray;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    background-color: rgb(156, 154, 143);
-    height: 100px;
-    flex: 0 0 auto;
+.active {
+  background-color: rgb(174, 211, 211);
 }
 
-.taskModal, .editModal {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    margin-left: 150px;
-    margin-top: 100px;
-    width: 30vw;
-    padding: 20px;
-    border: 1px solid gray;
-    background-color: gray;
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  background-color: rgb(156, 154, 143);
+  height: 100px;
+  flex: 0 0 auto;
 }
 
-.taskList{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    font-size: 20px;
-    margin: 5px;
+.taskModal,
+.editModal {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-left: 150px;
+  margin-top: 100px;
+  width: 30vw;
+  padding: 20px;
+  border: 1px solid gray;
+  background-color: gray;
 }
 
-.tasks{
-    display: flex;
-    justify-content:space-between;
-    width: 99.2%;
-    border: 1px dashed gray;
+.taskList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 20px;
+  margin: 5px;
 }
 
-.titleDiv{
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-    width: 300px;
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  width: 99.2%;
+  border: 1px dashed gray;
 }
 
-.taskEdit{
-    margin-right: 50px;
+.titleDiv {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+  width: 300px;
+}
+
+.taskEdit {
+  margin-right: 50px;
 }
 
 .taskControls {
-    display: flex;
-    width: 10vw;
-    justify-content: start;
-    margin-left: 50px;
-    margin-right: 50px;
+  display: flex;
+  width: 10vw;
+  justify-content: start;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.taskDetails{
-    display: flex;
-    width: 20vw;
-    justify-content: start;
-    margin-left: 50px;
-    margin-right: 50px;
+.taskDetails {
+  display: flex;
+  width: 20vw;
+  justify-content: start;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.description{
-    height: 100px;
+.description {
+  height: 100px;
 }
 /* 
 .invisible{
@@ -134,37 +134,37 @@ body{
 } */
 
 .overlay {
-    position: absolute;
-    width: 80%;
-    height: 100%;
+  position: absolute;
+  width: 80%;
+  height: 100%;
 }
 
 .completed {
-    text-decoration: line-through;
-    color: rgb(29, 28, 28);
+  text-decoration: line-through;
+  color: rgb(29, 28, 28);
 }
 
-.projects{
-    display: flex;
-    justify-content: space-between;
+.projects {
+  display: flex;
+  justify-content: space-between;
 }
 
 .projects:hover {
-    background-color: gray;
+  background-color: gray;
 }
 
-.activeProject{
-    background-color: gray;
+.activeProject {
+  background-color: gray;
 }
 
-.high{
-    background-color: red;
+.high {
+  background-color: red;
 }
 
-.medium{
-    background-color: yellow;
+.medium {
+  background-color: yellow;
 }
 
-.low{
-    background-color: green;
+.low {
+  background-color: green;
 }
