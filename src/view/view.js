@@ -76,7 +76,7 @@ export const view = (function () {
   const activateProject = (projectID) => {
     console.log(projectID);
     document
-      .querySelectorAll(".projects'")
+      .querySelectorAll(".projects")
       .forEach((project) => project.classList.remove("activeProject"));
     console.log(document.getElementById(projectID));
     document.getElementById(projectID).classList.add("activeProject");
@@ -272,7 +272,11 @@ export const view = (function () {
     taskList.appendChild(editModal);
 
     const prioOptions = ["high", "medium", "low"];
+    const title = document.querySelector("#title");
+    const description = document.querySelector("#description");
+    const duedate = document.querySelector("#duedate");
     const priority = document.querySelector('select[name="priority"]');
+    
     for (let i = 0; i < prioOptions.length; i++) {
       let opt = prioOptions[i];
       let el = document.createElement("option");
